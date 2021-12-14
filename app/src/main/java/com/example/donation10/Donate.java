@@ -8,12 +8,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.NumberPicker;
+import android.widget.ProgressBar;
+import android.widget.RadioGroup;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 public class Donate extends AppCompatActivity {
     private Button donateButton;
+    private RadioGroup paymentMethod;
+    private ProgressBar progressBar;
+    private NumberPicker amountPicker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +40,11 @@ public class Donate extends AppCompatActivity {
         {
             Log.v("Donate", "Really got the donate button");
         }
+        paymentMethod = (RadioGroup) findViewById(R.id.paymentMethod);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        amountPicker = (NumberPicker) findViewById(R.id.amountPicker);
+        amountPicker.setMinValue(0);
+        amountPicker.setMaxValue(1000);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -52,5 +63,9 @@ public class Donate extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void donateButtonPressed (View view)
+    {
+        Log.v("Donate", "Donate Pressed!");
     }
 }
