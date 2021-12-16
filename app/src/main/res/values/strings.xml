@@ -10,4 +10,6 @@
     <string name="total">Total so Far</string>
     <string name="totalSoFar">$ Total</string>
     <string name="menuReport">Report</string>
+    <string name="reportTitle">Report</string>
+    <string name="menuDonate">Donate</string>
 </resources>
