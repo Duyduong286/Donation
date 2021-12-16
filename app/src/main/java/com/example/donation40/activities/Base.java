@@ -1,4 +1,4 @@
-package com.example.donation30.activities;
+package com.example.donation40.activities;
 
 import android.content.Intent;
 import android.view.Menu;
@@ -7,8 +7,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.donation30.R;
-import com.example.donation30.models.Donation;
+import com.example.donation40.R;
+import com.example.donation40.models.Donation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,15 +60,15 @@ public class Base  extends AppCompatActivity {
         return true;
     }
 
-    public void settings(MenuItem item) {
-        Toast.makeText(this, "Settings Selected", Toast.LENGTH_SHORT).show();
-    }
-
     public void report(MenuItem item) {
         startActivity (new Intent(this, Report.class));
     }
 
     public void donate(MenuItem item) {
         startActivity (new Intent(this, Donate.class));
+    }
+
+    public void reset(MenuItem item) {
+
     }
 }

@@ -1,4 +1,4 @@
-package com.example.donation30.models;
+package com.example.donation40.models;
 
 public class Donation {
     public int amount;

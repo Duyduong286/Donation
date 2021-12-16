@@ -1,21 +1,16 @@
-package com.example.donation30.activities;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.donation40.activities;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.donation30.R;
-import com.example.donation30.models.Donation;
+import com.example.donation40.R;
+import com.example.donation40.models.Donation;
 
 import java.util.List;
 
