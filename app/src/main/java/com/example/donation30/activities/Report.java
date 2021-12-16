@@ -1,4 +1,4 @@
-package com.example.donation20;
+package com.example.donation30.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,9 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class Report extends AppCompatActivity {
+import com.example.donation30.R;
+
+public class Report extends Base {
 
     ListView listView;
     static final String[] numbers = new String[] {
@@ -29,12 +31,6 @@ public class Report extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, numbers);
         listView.setAdapter(adapter);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_donate, menu);
-        return true;
     }
 
     @Override
