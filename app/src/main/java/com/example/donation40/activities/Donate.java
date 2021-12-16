@@ -3,6 +3,7 @@ package com.example.donation40.activities;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,10 +64,23 @@ public class Donate extends Base {
         }
         if (donatedAmount > 0)
         {
-            newDonation(new Donation(donatedAmount, method));
-            progressBar.setProgress(totalDonated);
-            String totalDonatedStr = "$" + totalDonated;
+            app.newDonation(new Donation(donatedAmount, method));
+            progressBar.setProgress(app.totalDonated);
+            String totalDonatedStr = "$" + app.totalDonated;
             amountTotal.setText(totalDonatedStr);
         }
     }
+
+    @Override
+    public void reset(MenuItem item) {
+        app.totalDonated = 0;
+        app.dbManager.reset();
+        amountText.clearFocus();
+        amountText.setText(R.string.defaultAmount);
+        amountPicker.setValue(0);
+        progressBar.setProgress(0);
+        amountTotal.setText("$0");
+        paymentMethod.clearCheck();
+    }
+
 }

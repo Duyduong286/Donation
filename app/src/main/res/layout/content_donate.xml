@@ -95,14 +95,14 @@
         android:layout_marginBottom="26dp" />
 
     <EditText
+        android:id="@+id/paymentAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/paymentAmount"
         android:layout_alignTop="@+id/amount"
         android:layout_alignEnd="@+id/progressBar"
-        android:layout_toEndOf="@+id/donateButton" />
+        android:layout_toEndOf="@+id/donateButton"
+        android:ems="10"
+        android:inputType="number" />
 
     <TextView
         android:layout_width="wrap_content"
