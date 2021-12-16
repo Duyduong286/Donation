@@ -32,7 +32,9 @@ public class Base  extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        app.dbManager.close();
+        if (this instanceof Donate) {
+            app.dbManager.close();
+        }
     }
 
     @Override

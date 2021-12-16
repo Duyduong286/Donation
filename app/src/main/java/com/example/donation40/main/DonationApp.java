@@ -10,8 +10,7 @@ import com.example.donation40.models.Donation;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DonationApp extends Application
-{
+public class DonationApp extends Application {
     public final int target = 10000;
     public int totalDonated = 0;
     //public List <Donation> donations = new ArrayList<Donation>();
@@ -30,9 +29,9 @@ public class DonationApp extends Application
         }
         return targetAchieved;
     }
+
     @Override
-    public void onCreate()
-    {
+    public void onCreate() {
         super.onCreate();
         Log.v("Donate", "Donation App Started");
         dbManager = new DBManager(this);

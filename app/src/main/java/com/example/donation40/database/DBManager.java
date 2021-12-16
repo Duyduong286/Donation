@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.donation40.activities.Base;
 import com.example.donation40.models.Donation;
@@ -24,10 +25,12 @@ public class DBManager {
 	}
 
 	public void open() throws SQLException {
+		Log.v("Donate", "Database Open");
 		database = dbHelper.getWritableDatabase();
 	}
 
 	public void close() {
+		Log.v("Donate", "Database Closed");
 		database.close();
 	}
 

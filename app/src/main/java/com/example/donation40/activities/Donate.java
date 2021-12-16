@@ -2,6 +2,7 @@ package com.example.donation40.activities;
 
 import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -73,13 +74,14 @@ public class Donate extends Base {
 
     @Override
     public void reset(MenuItem item) {
-        app.totalDonated = 0;
         app.dbManager.reset();
+        app.totalDonated = 0;
+        amountTotal.setText("$" + app.totalDonated);
+
         amountText.clearFocus();
         amountText.setText(R.string.defaultAmount);
         amountPicker.setValue(0);
         progressBar.setProgress(0);
-        amountTotal.setText("$0");
         paymentMethod.clearCheck();
     }
 
