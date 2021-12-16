@@ -56,16 +56,6 @@ public class Donate extends Base {
         amountTotal.setText("$0");
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        switch (item.getItemId())
-        {
-            case R.id.menuReport : startActivity (new Intent(this, Report.class));
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
     public void donateButtonPressed (View view)
     {
         String method = paymentMethod.getCheckedRadioButtonId() == R.id.PayPal ?
