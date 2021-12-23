@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.donation40" >
+    package="com.example.donation50" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -9,12 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Donation10"
-        android:name="com.example.donation40.main.DonationApp">
+        android:name="com.example.donation50.main.DonationApp">
         <activity
-            android:name="com.example.donation40.activities.Report"
+            android:name="com.example.donation50.activities.Report"
             android:exported="false" />
         <activity
-            android:name="com.example.donation40.activities.Donate"
+            android:name="com.example.donation50.activities.Donate"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Donation10.NoActionBar" >

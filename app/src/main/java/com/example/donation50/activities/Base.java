@@ -1,20 +1,14 @@
-package com.example.donation40.activities;
+package com.example.donation50.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.donation40.R;
-import com.example.donation40.database.DBManager;
-import com.example.donation40.main.DonationApp;
-import com.example.donation40.models.Donation;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.donation50.R;
+import com.example.donation50.main.DonationApp;
 
 public class Base  extends AppCompatActivity {
     public DonationApp app;
@@ -25,16 +19,16 @@ public class Base  extends AppCompatActivity {
 
         app = (DonationApp) getApplication();
 
-        app.dbManager.open();
-        app.dbManager.setTotalDonated(this);
+//        app.dbManager.open();
+//        app.dbManager.setTotalDonated(this);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (this instanceof Donate) {
-            app.dbManager.close();
-        }
+//        if (this instanceof Donate) {
+//            app.dbManager.close();
+//        }
     }
 
     @Override
@@ -50,7 +44,7 @@ public class Base  extends AppCompatActivity {
         MenuItem donate = menu.findItem(R.id.menuDonate);
         MenuItem reset = menu.findItem(R.id.menuReset);
 
-        if(app.dbManager.getAll().isEmpty())
+        if(app.donations.isEmpty())
         {
             report.setEnabled(false);
             reset.setEnabled(false);
@@ -59,9 +53,10 @@ public class Base  extends AppCompatActivity {
             report.setEnabled(true);
             reset.setEnabled(true);
         }
+
         if(this instanceof Donate){
             donate.setVisible(false);
-            if(!app.dbManager.getAll().isEmpty())
+            if(!app.donations.isEmpty())
             {
                 report.setVisible(true);
                 reset.setEnabled(true);

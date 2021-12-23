@@ -1,4 +1,4 @@
-package com.example.donation40.database;
+package com.example.donation50.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

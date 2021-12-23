@@ -1,11 +1,11 @@
-package com.example.donation40.main;
+package com.example.donation50.main;
 
 import android.app.Application;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.donation40.database.DBManager;
-import com.example.donation40.models.Donation;
+import com.example.donation50.database.DBManager;
+import com.example.donation50.models.Donation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,14 +13,15 @@ import java.util.List;
 public class DonationApp extends Application {
     public final int target = 10000;
     public int totalDonated = 0;
-    //public List <Donation> donations = new ArrayList<Donation>();
-    public DBManager dbManager;
+    public List<Donation> donations = new ArrayList<Donation>();
+    //public DBManager dbManager;
+
     public boolean newDonation(Donation donation)
     {
         boolean targetAchieved = totalDonated > target;
         if (!targetAchieved)
         {
-            dbManager.add(donation);
+            //dbManager.add(donation);
             totalDonated += donation.amount;
         }
         else
@@ -34,7 +35,7 @@ public class DonationApp extends Application {
     public void onCreate() {
         super.onCreate();
         Log.v("Donate", "Donation App Started");
-        dbManager = new DBManager(this);
-        Log.v("Donate", "Database Created");
+//        dbManager = new DBManager(this);
+//        Log.v("Donate", "Database Created");
     }
 }
