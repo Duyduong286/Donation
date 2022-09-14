@@ -51,4 +51,5 @@
         </html>
 * Kết quả sau khi run và build code 
 
-![week1.png](attachment:9f1eb79d-decb-447a-a6b8-9bb30f24edb3.png)
+![week1](https://user-images.githubusercontent.com/64053706/190140324-9d6e745f-a3da-4d96-aa6b-b17185c22cee.png)
+
